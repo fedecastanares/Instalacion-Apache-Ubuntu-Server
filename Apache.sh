@@ -25,8 +25,6 @@ apt-get install apache2
 apt-get update
 apt-get upgrade
 clear
-echo -e "Instamos MySql\n\n Durante la instalación, el servidor te pedirá que selecciones y confirmes una contraseña para el usuario root de MySQL. Esta es una cuenta administrativa en MySQL que ha aumentado privilegios. Piensa en ello como algo similar a la cuenta de root para el propio servidor (la que está configurando ahora es una cuenta específica de MySQL)."  &&
-sleep 12
 apt-get install mysql-server
 service mysql start
 mysql_secure_installation
