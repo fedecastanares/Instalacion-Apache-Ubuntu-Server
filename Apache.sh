@@ -7,6 +7,7 @@ if [ $(whoami) != root ]
 		echo "Debe ser root para poder ejecutar este script"
 		sleep 3
 		clear
+		exit
 		fi
 }
 
