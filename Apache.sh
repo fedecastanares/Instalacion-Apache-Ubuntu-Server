@@ -47,6 +47,18 @@ apt-cache search php5-
 apt-get update
 apt-get upgrade
 clear
+echo -e "Esto le hará algunas preguntas para configurar su instalación correctamente.
+
+    Advertencia: cuando aparece el primer mensaje, apache2 se resalta, pero no se selecciona. Si no pulsa Espacio para seleccionar Apache, el instalador no moverá los archivos necesarios durante la instalación. Pulse Espacio , Tab y luego Intro para seleccionar Apache.
+
+    Para la selección del servidor, elija apache2 .
+    Seleccione sí cuando se le pregunte si desea utilizar dbconfig-commonpara configurar la base de datos
+    Se le pedirá la contraseña de administrador de su base de datos
+    A continuación, se le pedirá que elija y confirme una contraseña para la phpMyAdminaplicación en sí."
+sleep 12
+apt-get install phpmyadmin
+apt-get install php-mbstring
+apt-get install php-gettext
 echo -e "Tus ip local de acceso:"
 ifconfig >> ips.txt
 egrep 'inet {1,3} ips.txt'
